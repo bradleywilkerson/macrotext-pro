@@ -4,15 +4,11 @@ import { AppSidebar } from "@/components/app-sidebar"
 
 const Dashboard: React.FC = () => {
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <SidebarProvider>
-        <AppSidebar variant="inset" />
-        <SidebarInset>
-        </SidebarInset>
-      </SidebarProvider>
-
-    </div>
+    <SidebarProvider>
+      <AppSidebar variant="inset" />
+      <SidebarInset>
+      </SidebarInset>
+    </SidebarProvider>
   );
 };
 
