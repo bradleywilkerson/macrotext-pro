@@ -13,7 +13,7 @@ const Authenticate: React.FC = () => {
   const isSignup = new URLSearchParams(location.search).get('mode') === 'signup';
 
   useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_, session) => {
       if (session) {
         navigate('/dashboard');
       }
